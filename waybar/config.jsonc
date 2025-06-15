@@ -1,0 +1,130 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 43,
+  "spacing": "10px",
+  "modules-left": [
+    "custom/power",
+    "custom/reboot",
+    "custom/temperature",
+    "memory",
+    "cpu"
+    // "custom/ping"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "bluetooth",
+    "network",
+    "battery",
+    "pulseaudio",
+    "backlight",
+    "clock"
+  ],
+  //modules
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+    "custom/reboot": {
+    "format": "<span color='#FFD700'>  </span>",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Reboot"
+  },
+  "custom/power": {
+    "format": "<span color='#FF4040'>  </span>",
+    "on-click": "wlogout -c ~/.config/hypr/wlogout/layout -s ~/.config/hypr/wlogout/style.css",
+    "tooltip": true,
+    "tooltip-format": "Exit"
+  },
+  "custom/temperature": {
+    "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
+    "format": "<span color='#FFA500'>Temp : </span>{}°C ",
+    "interval": 3,
+    "tooltip": true,
+    "tooltip-format": " CPU : {}°C"
+  },
+  "memory": {
+    "format": "<span color='#00FF00'>RAM : </span>{used} GiB",
+    "tooltip": true,
+    "tooltip-format": "RAM : {used} / {total} GiB"
+  },
+  "cpu": {
+    "format": "<span color='#FF4500'>CPU : </span>{usage}%",
+    "tooltip": true,
+    "tooltip-format": "CPU {usage}%"
+  },
+  "pulseaudio": {
+    "format": "<span color='#00FF7F'> {icon} </span>{volume}% ",
+    "format-muted": "<span color='#FF4040'> 󰖁 </span>0% ",
+    "format-icons": {
+      "headphone": "<span color='#BF00FF'>  </span>",
+      "hands-free": "<span color='#BF00FF'>  </span>",
+      "headset": "<span color='#BF00FF'>  </span>",
+      "phone": "<span color='#00FFFF'>  </span>",
+      "portable": "<span color='#00FFFF'>  </span>",
+      "car": "<span color='#FFA500'>  </span>",
+      "default": [
+        "<span color='#808080'>  </span>",
+        "<span color='#FFFF66'>  </span>",
+        "<span color='#00FF7F'>  </span>"
+      ]
+    },
+    "on-click-right": "pactl -- set-sink-mute 0 toggle",
+    "on-click": "~/.config/waybar/scripts/toggle_pavucontrol.sh",
+    "tooltip": true,
+    "tooltip-format": "Volume : {volume}%"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span color='#FFD700'>{icon} </span>{percent}% ",
+    "tooltip": true,
+    "tooltip-format": "Screen-Light : {percent}%",
+    "format-icons": [
+      "<span color='#696969'> 󰃞 </span>",
+      "<span color='#A9A9A9'> 󰃝 </span>",
+      "<span color='#FFFF66'> 󰃟 </span>",
+      "<span color='#FFD700'> 󰃠 </span>"
+    ]
+  },
+  "network": {
+    "format-wifi": "<span color='#00FFFF'> 󰤨 </span> {essid} ",
+    "format-ethernet": "<span color='#7FFF00'> </span> Wired ",
+    "tooltip-format": "<span color='#FF1493'> 󰅧 </span> {bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span color='#FFA500'> 󱘖 </span> {ifname} (No IP) ",
+    "format-disconnected": "<span color='#FF4040'>  </span> Disconnected ",
+    "format-alt": "<span color='#00FFFF'> 󰤨 </span> {signalStrength}% ",
+    "interval": 1
+  },
+  // "custom/ping": {
+  //   "exec": "~/.config/waybar/scripts/ping_icon.sh",
+  //   "interval": 1,
+  //   "return-type": "json",
+  //   "tooltip": true,
+  //   "tooltip-format": "Ping: {ping} ms"
+  // },
+  "tray": {
+    "icon-size": 17,
+    "spacing": 6
+  }
+}
