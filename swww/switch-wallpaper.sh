@@ -2,12 +2,7 @@
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
-LAST_WALL="$HOME/.config/hypr/.last_wallpaper"
-
-if ! pgrep -x "hyprpaper" > /dev/null; then
-    echo "Erreur : hyprpaper n'est pas lancé !"
-    exit 1
-fi
+LAST_WALL="$HOME/.config/hypr/swww/.last_wallpaper"
 
 readarray -t WALLPAPERS < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) | sort)
 
@@ -25,8 +20,6 @@ while [[ "$SELECTED" == "" || "$SELECTED" == "$PREV" ]]; do
     RANDOM_INDEX=$((RANDOM % TOTAL))
     SELECTED="${WALLPAPERS[$RANDOM_INDEX]}"
 done
-
-MONITOR_NAME="eDP-1"
 
 # generate colors with wal
 wal -i "$SELECTED"
