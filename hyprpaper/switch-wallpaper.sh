@@ -28,6 +28,12 @@ done
 
 MONITOR_NAME="eDP-1"
 
+# generate colors with wal
+wal -i "$SELECTED"
+
+# Generate color scheme for hypr module
+sassc ~/.config/wlogout/style-base.scss ~/.config/wlogout/style.css
+
 hyprctl hyprpaper preload "$SELECTED"
 hyprctl hyprpaper wallpaper "$MONITOR_NAME,$SELECTED"
 
