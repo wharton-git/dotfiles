@@ -1,0 +1,157 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 10px;
+    min-height: 10px;
+}
+
+@import "/home/xeon/.cache/wal/colors.scss";
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces {
+    padding: 0px 5px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 5px;
+    color: $color9;
+    transition: all .2s ease;
+}
+
+#workspaces button:hover {
+    color: $color6;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: $color15;
+    border: none;
+    text-shadow: 0px 0px 5px $color13;
+}
+
+#workspaces button.empty {
+    color: $foreground;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .1);
+}
+
+#workspaces button.empty:hover {
+    color: $color6;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#workspaces button.empty.active {
+    color: $color14;
+    border: none;
+    text-shadow: 0px 0px 5px $color13;
+}
+
+.modules-center {
+    padding: 7px;
+    margin: 10 0 5 0;
+    border-radius: 10px;
+    background: $background;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+
+.modules-left {
+    margin: 10px 0 5px 10px;
+}
+
+.modules-right {
+    margin: 10px 10px 5px 0;
+}
+
+#bluetooth,
+#network,
+#battery,
+#pulseaudio,
+#backlight,
+#clock {
+    background: $background;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    padding: 0px 10px;
+}
+
+
+#pulseaudio,
+#backlight,
+#network {
+    padding: 0;
+}
+
+#bluetooth {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 20px;
+}
+
+#clock {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#custom-temperature,
+#memory,
+#cpu {
+    padding: 0 6px;
+    color: $foreground;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+}
+
+#custom-temperature {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#cpu {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#tray {
+    background: $background;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#custom-power,
+#custom-reboot {
+    padding: 0px 5px;
+    background: $background;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border-radius: 0;
+    transition: all .2s ease;
+}
+
+#custom-reboot {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 10px;
+}
+
+#custom-power {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

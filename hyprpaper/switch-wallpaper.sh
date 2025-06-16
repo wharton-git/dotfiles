@@ -33,8 +33,19 @@ wal -i "$SELECTED"
 
 # Generate color scheme for hypr module
 sassc ~/.config/wlogout/style-base.scss ~/.config/wlogout/style.css
+sassc ~/.config/hypr/waybar/style-base.scss ~/.config/hypr/waybar/style.css
+
+# Reload waybar if it's running
+
 
 hyprctl hyprpaper preload "$SELECTED"
 hyprctl hyprpaper wallpaper "$MONITOR_NAME,$SELECTED"
+
+killall waybar
+
+if [[ $USER == "xeon" ]]
+then
+    waybar -c ~/.config/hypr/waybar/config.jsonc -s ~/.config/hypr/waybar/style.css
+fi
 
 echo "$SELECTED" > "$LAST_WALL"
