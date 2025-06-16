@@ -31,16 +31,16 @@ MONITOR_NAME="eDP-1"
 # generate colors with wal
 wal -i "$SELECTED"
 
-# Generate color scheme for hypr module
-sassc ~/.config/wlogout/style-base.scss ~/.config/wlogout/style.css
+# Generate color scheme for waybar
 sassc ~/.config/hypr/waybar/style-base.scss ~/.config/hypr/waybar/style.css
 
+# Set the wallpaper using swww
+swww img "$SELECTED" --transition-type any --transition-duration 0.6
+
+# Generate color scheme for wlogout
+sassc ~/.config/wlogout/style-base.scss ~/.config/wlogout/style.css
+
 # Reload waybar if it's running
-
-
-hyprctl hyprpaper preload "$SELECTED"
-hyprctl hyprpaper wallpaper "$MONITOR_NAME,$SELECTED"
-
 killall waybar
 
 if [[ $USER == "xeon" ]]
