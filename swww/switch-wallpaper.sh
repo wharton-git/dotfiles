@@ -24,11 +24,14 @@ done
 # generate colors with wal
 wal -i "$SELECTED"
 
+# Set the wallpaper using swww
+swww img "$SELECTED" --transition-type any --transition-duration 0.6
+
 # Generate color scheme for waybar
 sassc ~/.config/hypr/waybar/style-base.scss ~/.config/hypr/waybar/style.css
 
-# Set the wallpaper using swww
-swww img "$SELECTED" --transition-type any --transition-duration 0.6
+# Ipdate color scheme for hypr
+bash ~/.config/hypr/update-hypr-color.sh
 
 # Generate color scheme for wlogout
 sassc ~/.config/wlogout/style-base.scss ~/.config/wlogout/style.css

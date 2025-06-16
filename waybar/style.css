@@ -14,27 +14,27 @@ window#waybar {
 #workspaces button {
   all: unset;
   padding: 0px 5px;
-  color: #221F69;
+  color: #58269E;
   transition: all .2s ease; }
 
 #workspaces button:hover {
-  color: #273CC1;
+  color: #9B56E7;
   border: none;
   text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease; }
 
 #workspaces button.active {
-  color: #86a6ea;
+  color: #adc9ee;
   border: none;
-  text-shadow: 0px 0px 5px #252AA3; }
+  text-shadow: 0px 0px 5px #B44ADD; }
 
 #workspaces button.empty {
-  color: #86a6ea;
+  color: #adc9ee;
   border: none;
   text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.1); }
 
 #workspaces button.empty:hover {
-  color: #273CC1;
+  color: #9B56E7;
   border: none;
   text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -44,15 +44,15 @@ window#waybar {
   -o-transition: all 0.3s ease; }
 
 #workspaces button.empty.active {
-  color: #273CC1;
+  color: #9B56E7;
   border: none;
-  text-shadow: 0px 0px 5px #252AA3; }
+  text-shadow: 0px 0px 5px #B44ADD; }
 
 .modules-center {
   padding: 7px;
   margin: 10 0 5 0;
   border-radius: 10px;
-  background: #0c0a12;
+  background: #050210;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6); }
 
 .modules-left {
@@ -67,7 +67,7 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #clock {
-  background: #0c0a12;
+  background: #050210;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
   border-radius: 0;
   -webkit-border-radius: 0;
@@ -94,7 +94,7 @@ window#waybar {
 #memory,
 #cpu {
   padding: 0 6px;
-  color: #86a6ea;
+  color: #adc9ee;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0; }
@@ -108,7 +108,7 @@ window#waybar {
   border-bottom-right-radius: 10px; }
 
 #tray {
-  background: #0c0a12;
+  background: #050210;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 5px; }
@@ -116,7 +116,7 @@ window#waybar {
 #custom-power,
 #custom-reboot {
   padding: 0px 5px;
-  background: #0c0a12;
+  background: #050210;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
   border-radius: 0;
   transition: all .2s ease; }
