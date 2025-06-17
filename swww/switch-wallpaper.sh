@@ -24,6 +24,8 @@ done
 # generate colors with wal
 wal -i "$SELECTED"
 
+bash ~/.config/hypr/scripts/convert-rgb.sh ~/.cache/wal/colors.scss
+
 # Set the wallpaper using swww
 swww img "$SELECTED" --transition-type any --transition-duration 0.6
 

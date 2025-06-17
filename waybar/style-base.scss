@@ -6,7 +6,7 @@
     min-height: 10px;
 }
 
-@import "/home/xeon/.cache/wal/colors.scss";
+@import "/home/xeon/.config/hypr/base/colors-rgb.scss";
 
 window#waybar {
     background: transparent;
@@ -113,9 +113,9 @@ window#waybar {
 #memory,
 #cpu {
     padding: 0 6px;
-    color: $foreground;
+    color: $background;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: $color15;
     border-radius: 0;
 }
 
