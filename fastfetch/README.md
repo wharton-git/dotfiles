@@ -2,6 +2,9 @@
 
 > A customizable and user-friendly alternative to Fastfetch, with easy installation and configuration instructions.
 
+## Preview
+
+![alt text](./preview-fastfetch.png)
 
 ## Fastfetch Configuration
 
@@ -48,3 +51,5 @@ and see the result.
 
 > **Note:**  
 > To get the most out of this configuration, make sure you have a Nerd Font installed to properly display the icons.
+
+
