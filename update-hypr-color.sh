@@ -10,7 +10,7 @@ INACTIVE_BORDER="$color8"
 
 # Fichier de config final généré
 TEMPLATE="$HOME/.config/hypr/hyprland.conf.template"
-OUTPUT="$HOME/.config/hypr/hyprland.conf"
+OUTPUT="$HOME/.config/hypr/conf/look&feel.conf"
 
 # Remplace les variables dans le template
 sed -e "s|{active_border_start}|rgba(${ACTIVE_BORDER_START:1}ee)|g" \
